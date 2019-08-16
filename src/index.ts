@@ -46,7 +46,22 @@ function setup(process: NodeJS.Process) {
       extends: ['tslint:latest', 'tslint-config-prettier']
     };
 
+    const tsconfig = {
+      compilerOptions: {
+        declaration: true,
+        esModuleInterop: true,
+        lib: ['esnext'],
+        module: 'commonjs',
+        moduleResolution: 'node',
+        outDir: 'lib',
+        removeComments: true,
+        strict: true
+      },
+      include: ['src']
+    };
+
     fs.writeFileSync(path.join(cwd, 'tslint.json'), formatJson(tslintConfig));
+    fs.writeFileSync(path.join(cwd, 'tsconfg.json'), formatJson(tsconfig));
     fs.writeFileSync(pathToFile, formatJson(packageJson));
   } catch (error) {
     process.stdout.write(`${error}\n`);
