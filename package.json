@@ -2,7 +2,7 @@
   "name": "static-strata",
   "version": "0.0.1-beta.2",
   "license": "MIT",
-  "description": "CLI to scaffold a TypeScript project with Husky, Prettier, Commitlint and TSlint",
+  "description": "CLI to scaffold a TypeScript project with Husky, Prettier, Commitlint and TSLint",
   "author": "Eric Liu (https://github.com/metonym)",
   "main": "lib/index.js",
   "types": "lib/index.d.js",

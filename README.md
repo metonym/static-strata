@@ -2,11 +2,25 @@
 
 [![Build Status](https://travis-ci.com/metonym/static-strata.svg?branch=master)](https://travis-ci.com/metonym/static-strata)
 
-> CLI to scaffold a TypeScript project with Husky, Prettier, Commitlint and TSlint.
+> CLI to scaffold a TypeScript project with Husky, Prettier, Commitlint and TSLint.
 
-This project is inspired by Kent C. Dodd's seminal ["Write Tests. Not too many. Mostly integration."](https://kentcdodds.com/blog/write-tests) article in which he emphasizes the benefits of using a static type system and tooling.
+## Getting Started
 
-While a static type system and tooling will not substitute a solid suite of unit, integration and end-to-end tests, they can alleviate the burden of writing superfluous runtime checks, boosting performance and developer productivity.
+```bash
+yarn add -D static-strata
+```
+
+Running the following command will set up configuration for Husky hooks, Prettier, Commitlint and TSLint.
+
+```bash
+yarn strata
+```
+
+## Motivation
+
+This project is inspired by Kent C. Dodd's seminal ["Write Tests. Not too many. Mostly integration."](https://kentcdodds.com/blog/write-tests), where he extols the benefits of using a static type system and tooling.
+
+While a static type system and tooling will not substitute a comprehensive test suite, they can alleviate the burden of writing superfluous runtime checks, boosting performance and developer productivity.
 
 ## Static Type System
 
