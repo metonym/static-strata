@@ -1,24 +1,26 @@
 {
   "name": "static-strata",
-  "version": "0.1.0",
+  "version": "0.0.1-alpha.1",
   "license": "MIT",
   "description": "Ode to a static type system and tooling",
   "author": "Eric Liu (https://github.com/metonym)",
-  "main": "dist/index.js",
-  "types": "dist/index.d.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.js",
   "scripts": {
     "develop": "tsc -w",
-    "build": "rm -rf dist && tsc",
+    "build": "rm -rf lib && tsc",
     "lint": "tslint --fix -p . -c tslint.json"
   },
-  "devDependencies": {
+  "dependencies": {
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
     "husky": "^3.0.3",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.1",
     "tslint": "^5.18.0",
-    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-prettier": "^1.18.0"
+  },
+  "devDependencies": {
     "typescript": "^3.5.3"
   },
   "husky": {
@@ -36,5 +38,21 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  }
+  },
+  "bin": {
+    "static-strata": "cli.js"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/metonym/static-strata.git"
+  },
+  "homepage": "https://github.com/metonym/static-strata",
+  "keywords": [],
+  "files": [
+    "lib/"
+  ],
+  "bugs": "https://github.com/metonym/static-strata/issues"
 }
