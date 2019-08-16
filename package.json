@@ -1,0 +1,40 @@
+{
+  "name": "static-strata",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Ode to a static type system and tooling",
+  "author": "Eric Liu (https://github.com/metonym)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "scripts": {
+    "develop": "tsc -w",
+    "build": "tsc",
+    "lint": "tslint --fix -p . -c tslint.json"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "husky": "^3.0.3",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && pretty-quick --staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
