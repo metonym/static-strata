@@ -30,7 +30,7 @@ Commitlint is a library that validates commit messages to ensure they follow [se
 
 [Husky](https://github.com/typicode/husky) is a library to ease the application of git hooks.
 
-## [Changelog](Changelog)
+## [Changelog](CHANGELOG.md)
 
 ## License
 
