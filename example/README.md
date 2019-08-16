@@ -1,6 +1,6 @@
 # example
 
-## Run the Example
+## Running the Example
 
 Clone this repo and install the dependencies:
 
@@ -8,10 +8,8 @@ Clone this repo and install the dependencies:
 yarn install
 ```
 
-Then, simply run:
+Then, simply invoke the "strata" script:
 
 ```bash
 yarn strata
 ```
-
-The package.json should contain configuration for husky, prettier, tslint, commitlint as well as TypeScript (tsconfig.json).

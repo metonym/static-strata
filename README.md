@@ -16,6 +16,8 @@ Running the following command will set up configuration for Husky hooks, Prettie
 yarn strata
 ```
 
+## [Example Project](example)
+
 ## Motivation
 
 This project is inspired by Kent C. Dodd's seminal ["Write Tests. Not too many. Mostly integration."](https://kentcdodds.com/blog/write-tests), where he extols the benefits of using a static type system and tooling.
