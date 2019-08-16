@@ -1,5 +1,5 @@
-function main() {
+const main = () => {
   return true;
-}
+};
 
 export { main };
