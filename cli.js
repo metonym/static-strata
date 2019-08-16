@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const { setup } = require('./lib');
 
-(async () => {
+(() => {
   try {
     setup(process);
   } catch (error) {
