@@ -17,6 +17,14 @@ function setup(process: NodeJS.Process) {
     const file = fs.readFileSync(pathToPkg);
     const packageJson = bufferToJson<IPackageJson>(file);
 
+    if (packageJson.scripts) {
+      packageJson.scripts.lint = 'tslint --fix -p . -c tslint.json';
+    } else {
+      packageJson.scripts = {
+        lint: 'tslint --fix -p . -c tslint.json'
+      };
+    }
+
     packageJson.husky = {
       hooks: {
         'pre-commit': 'yarn lint && pretty-quick --staged',
@@ -33,14 +41,6 @@ function setup(process: NodeJS.Process) {
     packageJson.commitlint = {
       extends: ['@commitlint/config-conventional']
     };
-
-    if (packageJson.scripts) {
-      packageJson.scripts.lint = 'tslint --fix -p . -c tslint.json';
-    } else {
-      packageJson.scripts = {
-        lint: 'tslint --fix -p . -c tslint.json'
-      };
-    }
 
     const tslintConfig = {
       extends: ['tslint:latest', 'tslint-config-prettier']
