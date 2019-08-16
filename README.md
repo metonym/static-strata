@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/metonym/static-strata.svg?branch=master)](https://travis-ci.com/metonym/static-strata)
 
-> Ode to a static type system and tooling for TypeScript.
+> CLI to scaffold a TypeScript project with Husky, Prettier, Commitlint and TSlint.
 
 This project is inspired by Kent C. Dodd's seminal ["Write Tests. Not too many. Mostly integration."](https://kentcdodds.com/blog/write-tests) article in which he emphasizes the benefits of using a static type system and tooling.
 
@@ -10,7 +10,7 @@ While a static type system and tooling will not substitute a solid suite of unit
 
 ## Static Type System
 
-The static type system is [TypeScript](https://www.typescriptlang.org/), a superset of JavaScript.
+The static type system is implemented using [TypeScript](https://www.typescriptlang.org/).
 
 ## Tooling
 
