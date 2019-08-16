@@ -13,8 +13,8 @@ function setup(process: NodeJS.Process) {
   }
 
   try {
-    const pathToFile = path.join(cwd, 'package.json');
-    const file = fs.readFileSync(pathToFile);
+    const pathToPkg = path.join(cwd, 'package.json');
+    const file = fs.readFileSync(pathToPkg);
     const packageJson = bufferToJson<IPackageJson>(file);
 
     packageJson.husky = {
@@ -61,8 +61,8 @@ function setup(process: NodeJS.Process) {
     };
 
     fs.writeFileSync(path.join(cwd, 'tslint.json'), formatJson(tslintConfig));
-    fs.writeFileSync(path.join(cwd, 'tsconfg.json'), formatJson(tsconfig));
-    fs.writeFileSync(pathToFile, formatJson(packageJson));
+    fs.writeFileSync(path.join(cwd, 'tsconfig.json'), formatJson(tsconfig));
+    fs.writeFileSync(pathToPkg, formatJson(packageJson));
   } catch (error) {
     process.stdout.write(`${error}\n`);
     process.exit(1);
