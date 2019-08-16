@@ -2,10 +2,7 @@
   "name": "example",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "setup": "static-strata"
-  },
   "devDependencies": {
-    "static-strata": "../"
+    "static-strata": "^0.0.1-beta.2"
   }
 }
