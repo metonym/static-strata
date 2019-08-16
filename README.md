@@ -20,15 +20,15 @@ Static tooling contains a mix of linting, code formatting and enforcing semantic
 
 [TSLint](https://github.com/palantir/tslint) is the most popular TypeScript linting tool.
 
-### Code formatting
+### Code Formatting
 
 [Prettier](https://github.com/prettier/prettier) is used to format code (all types of files) in an opinionated way.
 
-### Semantic commit messages
+### Semantic Commit Messages
 
 Commitlint is a library that validates commit messages to ensure they follow [semantic commit messages](https://seesparkbox.com/foundry/semantic_commit_messages).
 
-### Git hooks
+### Git Hooks
 
 [Husky](https://github.com/typicode/husky) is a library to ease the application of git hooks.
 
