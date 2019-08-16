@@ -1,5 +1,7 @@
 # static-strata
 
+[![Build Status](https://travis-ci.com/metonym/static-strata.svg?branch=master)](https://travis-ci.com/metonym/static-strata)
+
 > Ode to a static type system and tooling for TypeScript.
 
 This project is inspired by Kent C. Dodd's seminal ["Write Tests. Not too many. Mostly integration."](https://kentcdodds.com/blog/write-tests) article in which he emphasizes the benefits of using a static type system and tooling.
@@ -12,7 +14,7 @@ The static type system is [TypeScript](https://www.typescriptlang.org/), a super
 
 ## Tooling
 
-Static tooling contains a mix of linting, code formatting and enforcing semantic commit messages. These tools are run in automated fashion using git hooks.
+Static tooling contains a mix of linting, code formatting and enforcing semantic commit messages. These tools are run in an automated fashion using git hooks.
 
 ### Linting
 
