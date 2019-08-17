@@ -17,11 +17,15 @@ function setup(process: NodeJS.Process) {
     const file = fs.readFileSync(pathToPkg);
     const packageJson = bufferToJson<IPackageJson>(file);
 
+    const scripts = {
+      lint: 'tslint --fix -p . -c tslint.json'
+    };
+
     if (packageJson.scripts) {
-      packageJson.scripts.lint = 'tslint --fix -p . -c tslint.json';
+      packageJson.scripts.lint = scripts.lint;
     } else {
       packageJson.scripts = {
-        lint: 'tslint --fix -p . -c tslint.json'
+        lint: scripts.lint
       };
     }
 
