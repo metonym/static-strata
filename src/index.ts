@@ -1,16 +1,16 @@
 import fs from 'fs';
 import path from 'path';
 
+function bufferToJson<T>(buffer: Buffer): T {
+  return JSON.parse(buffer.toString());
+}
+
+function formatJson(json: object): string {
+  return JSON.stringify(json, null, 2);
+}
+
 function setup(process: NodeJS.Process) {
   const cwd = process.cwd();
-
-  function bufferToJson<T>(buffer: Buffer): T {
-    return JSON.parse(buffer.toString());
-  }
-
-  function formatJson(json: object): string {
-    return JSON.stringify(json, null, 2);
-  }
 
   try {
     const pathToPkg = path.join(cwd, 'package.json');
@@ -80,4 +80,4 @@ interface IPackageJson {
   commitlint: object;
 }
 
-export { setup };
+export { setup, bufferToJson, formatJson };
