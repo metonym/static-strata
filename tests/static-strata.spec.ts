@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { bufferToJson, formatJson } from '../';
+import { bufferToJson, formatJson } from '../src';
 
 describe('setup', () => {
   test('formatJson', () => {
