@@ -7,8 +7,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.js",
   "scripts": {
-    "develop": "tsc -w",
-    "build": "tsc -p tsconfig.prod.json",
+    "build": "tsc",
     "lint": "tslint --fix -p . -c tslint.json",
     "test": "jest --coverage",
     "test:tdd": "jest --watch",
@@ -23,6 +22,11 @@
     "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.0.2"
   },
   "husky": {
     "hooks": {
@@ -58,12 +62,7 @@
   "keywords": [],
   "files": [
     "cli.js",
-    "lib/"
+    "lib"
   ],
-  "bugs": "https://github.com/metonym/static-strata/issues",
-  "devDependencies": {
-    "@types/jest": "^24.0.18",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.0.2"
-  }
+  "bugs": "https://github.com/metonym/static-strata/issues"
 }
